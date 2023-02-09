@@ -36,8 +36,10 @@ function paintGeetings(username){
     greeting.innerText = `Hello ${username}!`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
-const saveUsername = localStorage.getItem(USERNAME_KEY)
 
+
+const saveUsername = localStorage.getItem(USERNAME_KEY)
+// 이 구문 제일 먼저 실행됨.
 if(saveUsername === null){
     // 폼을 보여주기 , hidden 클래스 지워주기
     loginForm.classList.remove(HIDDEN_CLASSNAME)
