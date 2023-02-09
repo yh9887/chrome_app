@@ -1,5 +1,6 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector('.id');
+const loginPw = document.querySelector('.pw');
 const loginInfo = document.querySelector("#mypage");
 
 // 로그인, 로그아웃
@@ -30,11 +31,13 @@ function LogOut() {
 
     // 아이디, 비밀번호 입력 창 숨기기
     loginForm.classList.add(HIDDEN_CLASSNAME)
+    loginInput.value = null
+    loginPw.value = null
 }
 
-function onLogoutSubmit(logout) {
+function onLogoutSubmit() {
 
-    logout.preventDefault();
+    // logout.preventDefault();
     // 로그아웃 버튼 클릭 시 로그인 회원 정보 숨기기
     loginInfo.classList.add(HIDDEN_CLASSNAME);
 
