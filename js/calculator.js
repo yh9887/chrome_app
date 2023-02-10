@@ -22,3 +22,8 @@ calcultor.minus(value1,value2)
 calcultor.multiple(value1,value2)
 calcultor.divide(value1,value2)
 calcultor.squareRoot(value1,value2)
+
+const strNum1 =parseInt("1234");
+const strNum2 =parseInt("4321");
+
+console.log(strNum1 + strNum2);

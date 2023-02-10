@@ -45,8 +45,23 @@ const quotes = [
 
 const quote = document.querySelector("#quote span:first-child")
 const author = document.querySelector("#quote span:last-child")
-
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
-quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+function write(){
+    quote.innerText = todaysQuote.quote;
+    author.innerText = todaysQuote.author;
+    setInterval(() => {
+        const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        quote.innerText = todaysQuote.quote;
+        author.innerText = todaysQuote.author;
+    }, 1000);
+}
+write()
+
+// *응용
+/*
+    일정 시간마다 명언과 필자가 바뀌게 하고 싶다면?
+    setInterval을 진행하는 함수를 만들어 write라는 함수에 넣기
+    최초에 innerText에 기본적으로 명언이 들어가고
+    1초 후에 랜덤한 명언이 새롭게 들어간다.
+*/

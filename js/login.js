@@ -58,7 +58,7 @@ function onLogoutSubmit() {
 
 // 최초 로그인 
 function onLoginSubmit(login) {
-    // 1. 브라우저의 기본 이벤트 막기 (submit)
+    // 1. 브라우저의 기본 이벤트 막기 (submit) 새로고침 막기
     login.preventDefault();
     // 2. 정보 보여주는 클래스 none 해주기
     loginInfo.classList.add(HIDDEN_CLASSNAME);
